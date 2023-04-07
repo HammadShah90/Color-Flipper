@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #bebebe;
 }
 
 .mainHeading {
@@ -18,8 +19,9 @@
 }
 
 .mainHeading h1{
-    text-shadow: 0px 5px 8px #026824;
+    text-shadow: 0px 10px 10px #e4e714;
     font-size: 42px;
+    color: #ffffff;
 }
 
 .box1 ul {
@@ -38,39 +40,34 @@
     border-radius: 30px;
     cursor: pointer;
 }
-.box1 ul li:hover,
-.box1 ul li:visited,
-.box1 ul li:focus {
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 15px;
-    transition: 200ms linear;
-    font-weight: bold;
-    border: none;
-}
 
 .active {
-    background-color: #000000 !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     border-radius: 15px !important;
-    /* transition: 200ms linear; */
+    transition: 200ms linear !important;
     font-weight: bold !important;
-    border: none !important
+    border: none !important;
+}
+
+#hexCodeWrapper {
+    display: none;
 }
 
 
 .box2 {
-    min-width: 320px;
-    max-width: 1440px;
+    /* min-width: 320px;
+    max-width: 1440px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: black;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     padding: 60px 90px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    box-shadow: -6px -6px 10px rgb(80, 80, 80), 6px 6px 10px rgb(80, 80, 80);
 }
 
 .box2 h1 {
@@ -79,22 +76,39 @@
 
 .box2 h2 {
     margin-top: 30px;
+    text-align: center;
 }
 
-.bgChangerBtn {
+.box2 button {
     margin-top: 30px;
     padding: 10px;
     border-radius: 30px;
     font-weight: 600;
     background-color: blue;
+    color: #ffffff;
     cursor: pointer;
+    position: relative;
+    left: 35%;
 }
 
-.bgChangerBtn:hover,
-.bgChangerBtn:focus {
+.box2 button:hover,
+.box2 button:focus {
     background-color: aqua;
     color: black;
     transition: 250ms linear;
     transform: translateY(-5px);
+}
+
+
+/* Smartphones */
+@media only screen and (max-width: 425px) {
+    .box2 {
+        padding: 60px 40px;
+    }
+    .box1 ul li {
+        width: 100px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
 }
 
